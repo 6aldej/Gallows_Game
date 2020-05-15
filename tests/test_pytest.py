@@ -35,8 +35,8 @@ def test_show_menu(capsys):
 def test_show_rules(capsys):
     show_rules()
     assert capsys.readouterr().out == '\n1. Вы должны угадать слово. Введите с клавиатуры букву. Одна буква - один ход.\n'\
-                                      '2. Если вы угадаете правильно, то увидите буквы, которые присутствуют в слове.\n'\
-                                      '3. Если такой буквы нет - вы получаете штрафное очко. Четыре штрафных очка - конец игры :(\n'
+                                        '2. Если вы угадаете правильно, то увидите буквы, которые присутствуют в слове.\n'\
+                                        '3. Если такой буквы нет - вы получаете штрафное очко. Четыре штрафных очка - конец игры :(\n'
 
 
 def test_play_game_win(capsys):
@@ -72,7 +72,7 @@ def test_play_game_win(capsys):
                            '\nНажмите 1, чтобы начать новую игру\n'
                            'Нажмите 2, чтобы узнать правила игры\n'
                            'Нажмите 0, чтобы выйти из игры\n'])
-    assert err == ''
+    
 
 
 def test_play_game_fail(capsys):
@@ -145,7 +145,7 @@ def test_play_game_fail(capsys):
                            '\nНажмите 1, чтобы начать новую игру\n'
                            'Нажмите 2, чтобы узнать правила игры\n'
                            'Нажмите 0, чтобы выйти из игры\n'])
-    assert err == ''
+    
 
 
 def test_play_game_invalid_input(capsys):
@@ -220,7 +220,7 @@ def test_play_game_invalid_input(capsys):
                            '\nНажмите 1, чтобы начать новую игру\n'
                            'Нажмите 2, чтобы узнать правила игры\n'
                            'Нажмите 0, чтобы выйти из игры\n'])
-    assert err == ''
+    
 
 
 @pytest.mark.parametrize('input_value,output', [
@@ -260,4 +260,4 @@ def test_option_handler(capsys, input_value, output):
     out, err = capsys.readouterr()
 
     assert out == output
-    assert err == ''
+    
