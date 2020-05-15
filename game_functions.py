@@ -48,7 +48,7 @@ def option_handler(option):
             show_menu()
             option_handler(input())
     except ValueError:
-        print('\nНет такого варианта :( Попробуйте ещё раз\n')
+        print('\nНет такого варианта! :( Попробуйте ещё раз\n')
         show_menu()
         option_handler(input())
 
